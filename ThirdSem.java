@@ -10,9 +10,13 @@ import java.util.Vector;
 
 public class ThirdSem {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/dbms?useSSL=false&serverTimezone=UTC";
-    private static final String DB_USER = "root";
-    private static final String DB_PASS = "Shruti@2006";
+    private static final String DB_URL =
+            System.getenv().getOrDefault("NDMA_DB_URL",
+                    "jdbc:mysql://localhost:3306/dbms?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC");
+    private static final String DB_USER =
+            System.getenv().getOrDefault("NDMA_DB_USER", "root");
+    private static final String DB_PASS =
+            System.getenv().getOrDefault("NDMA_DB_PASS", "");
 
     private static final String FALLBACK_ADMIN = "admin";
     private static final String FALLBACK_PASS = "admin123";
