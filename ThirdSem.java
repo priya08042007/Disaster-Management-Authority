@@ -12,7 +12,7 @@ public class ThirdSem {
 
     private static final String DB_URL =
             System.getenv().getOrDefault("NDMA_DB_URL",
-                    "jdbc:mysql://localhost:3306/dbms?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC");
+                    "jdbc:mysql://localhost:3306/NDMA?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC");
     private static final String DB_USER =
             System.getenv().getOrDefault("NDMA_DB_USER", "root");
     private static final String DB_PASS =
